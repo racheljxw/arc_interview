@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "Anton", sans-serif;
+  --font-body: "Nunito", sans-serif;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@layer components {
+  .button {
+    @apply text-2xl bg-[#D9D9D9] text-gray-800 px-6 py-1 rounded-full opacity-70;
+  }
+
+  h1 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .stat-name {
+    @apply text-3xl font-semibold;
+  }
+
+  .stat-value {
+    @apply text-4xl font-bold;
+  }
+
+  .stat-bar-container {
+    @apply w-full h-3 bg-white/20 rounded-md mt-3 overflow-hidden;
+  }
+
+  .stat-bar {
+    @apply h-full bg-linear-to-r from-yellow-400 to-yellow-600 rounded-md transition-transform duration-600 ease-out;
+  }
+}
